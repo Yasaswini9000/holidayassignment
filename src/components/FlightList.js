@@ -2,7 +2,7 @@ import React from 'react';
 import FlightCard from './FlightCard';
 
 const FlightList = () => {
-  // 1. Data Object key names match ayyela chusukondi
+  // 1. Data Object key names 
   const outboundData = [
     { id: 1, airline: 'Air India Express', code: 'IX 2879', price: '105,300', depTime: '12:05', arrTime: '13:50', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: true, logoBg: 'bg-orange-600', planeRotate: 'rotate-45' },
     { id: 2, airline: 'IndiGo', code: '6E 6512', price: '98,200', depTime: '06:30', arrTime: '08:15', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: false, logoBg: 'bg-blue-800', planeRotate: 'rotate-45' },
