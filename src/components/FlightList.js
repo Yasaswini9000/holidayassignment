@@ -2,140 +2,21 @@ import React from 'react';
 import FlightCard from './FlightCard';
 
 const FlightList = () => {
+  // 1. Data Object key names match ayyela chusukondi
   const outboundData = [
-    {
-      airline: 'Air India Express',
-      code: 'IX 2879',
-      price: '105,300',
-      depTime: '12:05',
-      arrTime: '13:50',
-      from: 'HYD',
-      to: 'GOX',
-      type: 'Publish',
-      isSelected: true,
-      logoBg: 'bg-orange-600',
-      planeRotate: 'rotate-45',
-    },
-    {
-      airline: 'IndiGo',
-      code: '6E 6512',
-      price: '98,200',
-      depTime: '06:30',
-      arrTime: '08:15',
-      from: 'HYD',
-      to: 'GOX',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-blue-800',
-      planeRotate: 'rotate-45',
-    },
-    {
-      airline: 'Vistara',
-      code: 'UK 872',
-      price: '112,500',
-      depTime: '15:20',
-      arrTime: '17:10',
-      from: 'HYD',
-      to: 'GOX',
-      type: 'SME',
-      isSelected: false,
-      logoBg: 'bg-purple-900',
-      planeRotate: 'rotate-45',
-    },
-    {
-      airline: 'Air India',
-      code: 'AI 440',
-      price: '107,000',
-      depTime: '18:45',
-      arrTime: '20:30',
-      from: 'HYD',
-      to: 'GOX',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-red-600',
-      planeRotate: 'rotate-45',
-    },
-    {
-      airline: 'SpiceJet',
-      code: 'SG 123',
-      price: '95,000',
-      depTime: '21:00',
-      arrTime: '22:45',
-      from: 'HYD',
-      to: 'GOX',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-amber-500',
-      planeRotate: 'rotate-45',
-    },
+    { id: 1, airline: 'Air India Express', code: 'IX 2879', price: '105,300', depTime: '12:05', arrTime: '13:50', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: true, logoBg: 'bg-orange-600', planeRotate: 'rotate-45' },
+    { id: 2, airline: 'IndiGo', code: '6E 6512', price: '98,200', depTime: '06:30', arrTime: '08:15', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: false, logoBg: 'bg-blue-800', planeRotate: 'rotate-45' },
+    { id: 3, airline: 'Vistara', code: 'UK 872', price: '112,500', depTime: '15:20', arrTime: '17:10', from: 'HYD', to: 'GOX', type: 'SME', isSelected: false, logoBg: 'bg-purple-900', planeRotate: 'rotate-45' },
+    { id: 4, airline: 'Air India', code: 'AI 440', price: '107,000', depTime: '18:45', arrTime: '20:30', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: false, logoBg: 'bg-red-600', planeRotate: 'rotate-45' },
+    { id: 5, airline: 'SpiceJet', code: 'SG 123', price: '95,000', depTime: '21:00', arrTime: '22:45', from: 'HYD', to: 'GOX', type: 'Publish', isSelected: false, logoBg: 'bg-amber-500', planeRotate: 'rotate-45' },
   ];
 
   const returnData = [
-    {
-      airline: 'Air India',
-      code: 'AI 879',
-      price: '105,300',
-      depTime: '20:00',
-      arrTime: '21:45',
-      from: 'GOX',
-      to: 'HYD',
-      type: 'SME',
-      isSelected: true,
-      logoBg: 'bg-red-700',
-      planeRotate: 'rotate-[225deg]',
-    },
-    {
-      airline: 'SpiceJet',
-      code: 'SG 441',
-      price: '96,800',
-      depTime: '22:15',
-      arrTime: '00:05',
-      from: 'GOX',
-      to: 'HYD',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-amber-400',
-      planeRotate: 'rotate-[225deg]',
-    },
-    {
-      airline: 'Akasa Air',
-      code: 'QP 1102',
-      price: '101,400',
-      depTime: '10:00',
-      arrTime: '11:45',
-      from: 'GOX',
-      to: 'HYD',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-orange-400',
-      planeRotate: 'rotate-[225deg]',
-    },
-    {
-      airline: 'IndiGo',
-      code: '6E 221',
-      price: '99,000',
-      depTime: '07:30',
-      arrTime: '09:15',
-      from: 'GOX',
-      to: 'HYD',
-      type: 'Publish',
-      isSelected: false,
-      logoBg: 'bg-blue-700',
-      planeRotate: 'rotate-[225deg]',
-    },
-    {
-      airline: 'Vistara',
-      code: 'UK 991',
-      price: '115,000',
-      depTime: '14:00',
-      arrTime: '15:45',
-      from: 'GOX',
-      to: 'HYD',
-      type: 'SME',
-      isSelected: false,
-      logoBg: 'bg-purple-800',
-      planeRotate: 'rotate-[225deg]',
-    },
+    { id: 6, airline: 'Air India', code: 'AI 879', price: '105,300', depTime: '20:00', arrTime: '21:45', from: 'GOX', to: 'HYD', type: 'SME', isSelected: true, logoBg: 'bg-red-700', planeRotate: 'rotate-[225deg]' },
+    { id: 7, airline: 'SpiceJet', code: 'SG 441', price: '96,800', depTime: '22:15', arrTime: '00:05', from: 'GOX', to: 'HYD', type: 'Publish', isSelected: false, logoBg: 'bg-amber-400', planeRotate: 'rotate-[225deg]' },
+    { id: 8, airline: 'Akasa Air', code: 'QP 1102', price: '101,400', depTime: '10:00', arrTime: '11:45', from: 'GOX', to: 'HYD', type: 'Publish', isSelected: false, logoBg: 'bg-orange-400', planeRotate: 'rotate-[225deg]' },
+    { id: 9, airline: 'IndiGo', code: '6E 221', price: '99,000', depTime: '07:30', arrTime: '09:15', from: 'GOX', to: 'HYD', type: 'Publish', isSelected: false, logoBg: 'bg-blue-700', planeRotate: 'rotate-[225deg]' },
+    { id: 10, airline: 'Vistara', code: 'UK 991', price: '115,000', depTime: '14:00', arrTime: '15:45', from: 'GOX', to: 'HYD', type: 'SME', isSelected: false, logoBg: 'bg-purple-800', planeRotate: 'rotate-[225deg]' },
   ];
 
   return (
@@ -151,14 +32,14 @@ const FlightList = () => {
             airline={flight.airline}
             code={flight.code}
             price={flight.price}
-            depTime={flight.dep}
-            arrTime={flight.arr}
-            from="HYD"
-            to="GOX"
+            depTime={flight.depTime} // flight.dep kaadu, flight.depTime ani undali
+            arrTime={flight.arrTime} 
+            from={flight.from}
+            to={flight.to}
             type={flight.type}
-            isSelected={flight.selected}
-            logoBg={flight.logo}
-            planeRotate="rotate-45"
+            isSelected={flight.isSelected} // flight.selected kaadu
+            logoBg={flight.logoBg} // flight.logo kaadu
+            planeRotate={flight.planeRotate}
           />
         ))}
       </div>
@@ -174,14 +55,14 @@ const FlightList = () => {
             airline={flight.airline}
             code={flight.code}
             price={flight.price}
-            depTime={flight.dep}
-            arrTime={flight.arr}
-            from="GOX"
-            to="HYD"
+            depTime={flight.depTime}
+            arrTime={flight.arrTime}
+            from={flight.from}
+            to={flight.to}
             type={flight.type}
-            isSelected={flight.selected}
-            logoBg={flight.logo}
-            planeRotate="rotate-[225deg]"
+            isSelected={flight.isSelected}
+            logoBg={flight.logoBg}
+            planeRotate={flight.planeRotate}
           />
         ))}
       </div>
